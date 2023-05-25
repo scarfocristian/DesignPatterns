@@ -1,4 +1,6 @@
 ﻿using DesignPatterns.Builder;
+using DesignPatterns.Estructural_Adapter;
+using DesignPatterns.Estructural_Facade;
 using DesignPatterns.FactoryMethodFirstExample;
 using DesignPatterns.Singleton;
 using System;
@@ -9,6 +11,8 @@ namespace DesignPatterns
     {
         static void Main(string[] args)
         {
+            #region Creacional
+
             #region FactoryMethod
             //VehicleFactory factory = new ConcreteVehicleFactory();
 
@@ -38,6 +42,29 @@ namespace DesignPatterns
             #region Singleton
 
             //var singleton = SingletonInstance.GetInstance();
+
+            #endregion
+
+            #endregion
+
+            #region Estructural
+
+            #region Adapter
+
+            //Adaptee adaptee = new Adaptee();
+            //ITarget target = new Adapter(adaptee);
+
+            //Console.WriteLine(target.GetRequest());
+
+            #endregion
+
+            #region Facade
+
+            //Facade facade = new Facade();
+            //facade.MethodA();
+            //facade.MethodB();
+
+            #endregion
 
             #endregion
 
