@@ -1,4 +1,5 @@
 ﻿using DesignPatterns.Builder;
+using DesignPatterns.Comportamiento_Strategy;
 using DesignPatterns.Estructural_Adapter;
 using DesignPatterns.Estructural_Facade;
 using DesignPatterns.FactoryMethodFirstExample;
@@ -63,6 +64,20 @@ namespace DesignPatterns
             //Facade facade = new Facade();
             //facade.MethodA();
             //facade.MethodB();
+
+            #endregion
+
+            #endregion
+
+            #region Comportamiento
+
+            #region Strategy
+
+            Context context;
+            context = new Context(new ConcreteStrategyA());
+            context.ContextInterface();
+            context = new Context(new ConcreteStrategyB());
+            context.ContextInterface();
 
             #endregion
 
