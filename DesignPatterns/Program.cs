@@ -1,6 +1,7 @@
 ﻿using DesignPatterns.Builder;
 using DesignPatterns.Comportamiento_Strategy;
 using DesignPatterns.Estructural_Adapter;
+using DesignPatterns.Estructural_Decorator;
 using DesignPatterns.Estructural_Facade;
 using DesignPatterns.FactoryMethodFirstExample;
 using DesignPatterns.Singleton;
@@ -59,6 +60,23 @@ namespace DesignPatterns
 
             #endregion
 
+            #region Decorator
+
+            PlainPizza plainPizzaObj = new PlainPizza();
+            string plainPizza = plainPizzaObj.MakePizza();
+            Console.WriteLine(plainPizza);
+                        
+            PizzaDecorator chickenPizzaDecorator = new ChickenPizzaDecorator(plainPizzaObj);
+
+            string chickenPizza = chickenPizzaDecorator.MakePizza();
+            Console.WriteLine("\n'" + chickenPizza + "' using ChickenPizzaDecorator");
+            
+            VegPizzaDecorator vegPizzaDecorator = new VegPizzaDecorator(plainPizzaObj);
+            string vegPizza = vegPizzaDecorator.MakePizza();
+            Console.WriteLine("\n'" + vegPizza + "' using VegPizzaDecorator");
+
+            #endregion
+
             #region Facade
 
             //Facade facade = new Facade();
@@ -73,11 +91,11 @@ namespace DesignPatterns
 
             #region Strategy
 
-            Context context;
-            context = new Context(new ConcreteStrategyA());
-            context.ContextInterface();
-            context = new Context(new ConcreteStrategyB());
-            context.ContextInterface();
+            //Context context;
+            //context = new Context(new ConcreteStrategyA());
+            //context.ContextInterface();
+            //context = new Context(new ConcreteStrategyB());
+            //context.ContextInterface();
 
             #endregion
 
