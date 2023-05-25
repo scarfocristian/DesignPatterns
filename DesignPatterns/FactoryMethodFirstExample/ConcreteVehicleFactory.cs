@@ -4,7 +4,7 @@ namespace DesignPatterns.FactoryMethodFirstExample
 {
     public class ConcreteVehicleFactory : VehicleFactory
     {
-        public override IFactory GetVehicle(string Vehicle)
+        public IFactory GetVehicle(string Vehicle)
         {
             switch (Vehicle)
             {

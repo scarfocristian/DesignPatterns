@@ -1,7 +1,7 @@
 ﻿namespace DesignPatterns.FactoryMethodFirstExample
 {
-    public abstract class VehicleFactory
+    public interface VehicleFactory
     {
-        public abstract IFactory GetVehicle(string Vehicle);
+        public IFactory GetVehicle(string Vehicle);
     }
 }
